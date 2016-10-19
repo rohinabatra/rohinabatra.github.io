@@ -1,0 +1,451 @@
+body, html {
+							/*gets rid of the white space on right of of page*/
+  overflow-x:	hidden;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
+  -webkit-font-smoothing: antialiased;
+}
+.site-header {
+							/*stops header from hiding behind fixed top nav*/
+	margin-top: 90px;
+	margin-bottom: 20px;
+}
+.custom-hide {
+							/*class used for JS fuctions*/
+	display: none;
+}
+li {
+	list-style: none;
+}
+/****************** TOP FIXED NAV *********************************************/
+.navbar {
+	min-height: 0;
+	padding: 15px;
+}
+.navbar-default {
+	background-color: rgb(44,44,44);
+}
+.navbar-default .navbar-nav>li>a {
+    padding: 10px 25px;
+	color: white;
+	font-size: 1.2em;
+}
+.navbar-default .navbar-brand {
+	position: absolute;
+	top: 12px;
+	font-size: 3em;
+	color: white;
+	font-family: 'Pacifico', cursive;
+	padding: 6px;
+	background: rgba(242,45,25,1);
+	border-radius: 50%;
+}
+.navbar-default .navbar-brand:hover {
+	color: rgba(242,45,25,1);
+	background: white;
+}
+@media (max-width: 900px) {
+	.navbar-brand {
+		font-size: 1em;
+	}
+}
+@media (max-width: 320px) {
+	.navbar-brand {
+								/*Hides the brand logo when smaller than 320px*/
+		display:	none;
+	}
+}
+.navbar-right > li:nth-child(1), .navbar-right > li:nth-child(1)>a:focus{
+	color: white;
+	background-color: rgb(44,44,44);
+	max-width: 300px;
+}
+.navbar-right > li:nth-child(2),.navbar-right > li:nth-child(2)>a:focus {
+	color: white;
+	background-color: rgb(81, 201, 109);
+	max-width: 300px;
+}
+.navbar-right>li:nth-child(1){
+	margin-right: 35px;
+}
+
+.free-shipping-block {
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    color: #fff;
+    padding: 7px;
+    transform: translate(0%,-40%);
+}
+@media (max-width: 1200px) {
+	.free-shipping-block {
+		left: 30%;
+		font-size: .8em;
+	}
+}
+@media (max-width: 920px) {
+	.free-shipping-block {
+		display: none;
+	}
+}
+.navbar-default .navbar-collapse {
+	border:none;
+}
+/******************  TOP "MY ACCOUNT" DROPDOWN MENU ***************************/
+#top-menu-dropdown {
+    position: absolute;
+    background: rgba(44,44,44,1);
+    top: 37px;
+    width: 120%;
+    left: -10%;
+    padding: 20px;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+}
+@media (max-width: 760px) {
+	#top-menu-dropdown {
+	    position: fixed;
+	    margin-top: 0%;
+	    top: 64px;
+	    z-index: 100;
+	    width: 100%;
+	    left: 0;
+	    padding: 10px;
+	}
+}
+.custom-btn-white, .custom-btn-white:focus,.custom-btn-white-reversed, .custom-btn-white-reversed:focus  {
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 0;
+}
+.custom-btn-white, .custom-btn-white:focus {
+	background: #fff;
+    color: rgba(44,44,44,1);
+
+}
+.custom-btn-white-reversed, .custom-btn-white-reversed:focus {
+	background: rgba(44,44,44,1);
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+/******************  SECONDARY TOP FIXED NAV **********************************/
+.nav-pills {
+	background: rgba(245,245,245,1);
+	border-bottom: rgba(245,245,245,1);
+	height: 120px;
+	padding: 70px 0;
+}
+ .nav-pills > li >a {
+ 	color: black;
+ 	padding: 25px;
+ 	text-transform: uppercase;
+ 	letter-spacing: 1px;
+ 	font-size: 1.2em;
+ 	font-weight: bold;
+ }
+ @media (max-width: 500px) {
+ 	.nav-pills > li >a {
+ 		font-size: 1em;
+ 		padding: 25px 5px;
+ 	}
+ }
+ @media (max-width: 320px) {
+ 	.nav-pills > li:nth-child(3) {
+ 		display: none;
+ 	}
+ 	ul .nav-pills  {
+ 		display: block;
+ 	}
+ }
+.nav-pills > li > a:active, .nav-pills > li > a:focus, .nav-pills > li > a:hover {
+	background: none;
+	padding-bottom: 0px;
+ }
+ .nav-pills > li > a:after {
+ 													/*animated bottom border on hover*/
+  display:	block;
+  content: '';
+  border-bottom: solid 3px rgba(242,45,25,1);  
+  transform: scaleX(0);  
+  -webkit-transition: transform 250ms ease-in-out;           /*Bottom line on hover*/
+  -moz-transition: transform 250ms ease-in-out;           /*Bottom line on hover*/
+  transition: transform 250ms ease-in-out;           /*Bottom line on hover*/
+}
+.nav-pills > li > a:hover:after {
+	transform: scaleX(1);
+}
+.nav-pills > li > a.fromRight:after {
+	transform-origin:100% 50%;
+}
+.nav-pills > li > a.fromLeft:after {
+	transform-origin:  0% 50%; 
+}
+
+/******************  JUMBOTRON ************************************************/
+.jumbotron {
+	color: white;
+	min-height: 800px;
+	margin-bottom: 5px;
+}
+.container-fluid .jumbotron {
+	border-radius: 0;
+
+}
+.jumbotron {
+	background: url("../images/woman-serving-snacks.jpeg");
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: cover;
+}
+.jumbotron .container {
+	padding: 60px;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 800;
+	letter-spacing: 1px;
+	line-height: 1.25;
+}
+/******************  4x FOCUS IMAGES WITH ITEM DETAILS SECTION  **************/
+
+.item-details-box:hover {
+	background-color: rgba(242, 45,25,0);
+}
+table {
+	background-color: rgba(255,255,255,.7);
+	color: rgb(44,44,44);
+	font-size: 1em;
+}
+.focus-images-section .col-sm-6 {
+	padding: 2px;
+}
+.focus-images-section .row {
+	margin-top: 30px;
+}
+/****************** CHEFS SECTION WITH BIO ON HOVER ***************************/
+.front-page-image-2-1, .front-page-image-2-2, .front-page-image-2-3{
+	color: white;
+	height: 400px;
+	margin:20px;
+	border-radius: 50%;
+}
+.front-page-image-2-1 {
+	background: url("../images/chefs-images/chef-1.jpeg");
+	background-size: cover;
+	background-position: center center;
+}
+.front-page-image-2-2 {
+	background: url("../images/chefs-images/chef-2.jpeg");
+	background-size: cover;
+	background-position: center center;
+}
+.front-page-image-2-3 {
+	background: url("../images/chefs-images/chef-3.jpeg");
+	background-size: cover;
+	background-position: center center;
+}
+.chef-bio-2-1, .chef-bio-2-2, .chef-bio-2-3 {
+	background: rgba(255,255,255,.5);
+	-webkit-transition: background-color 0.75s ease-in-out;
+	-moz-transition: background-color 0.75s ease-in-out;
+	transition: background-color 0.75s ease-in-out;
+	color: white;
+	font-size: 1.3em;
+	height: 100%;
+	width: 100%;
+	padding: 50px;
+	text-align: center;
+	border-radius: 50%;
+}
+.chef-bio-2-1:hover, .chef-bio-2-2:hover, .chef-bio-2-3:hover{
+	background-color: rgba(156,194,121,.9);
+}
+.chef-bio-2-1>a, .chef-bio-2-2>a, .chef-bio-2-3>a{
+	color: black;
+}
+.front-page-image-2-1:hover, .front-page-image-2-2:hover, .front-page-image-2-3:hover{
+	-webkit-transform: scale(1.15, 1.15);
+	-moz-transform: scale(1.15, 1.15);
+	transform: scale(1.15, 1.15);
+}
+
+/******************   GENERAL STYLING  ****************************************/
+.btn-primary, .btn-primary:focus {
+    color: #2c2c2c;
+    background-color: rgba(255,255,255,.8);
+    border: 2px;
+    margin: 10px;
+    border-radius: 0;
+}
+#full-range-button {
+	margin: 40px;
+	border: 1px solid grey;
+}
+#full-range-button:hover {
+	font-size: 1.5em;
+	background: rgba(242,45,25,.9);
+	border:none;
+	/*margin: 30px 0;*/
+	/*transform: scale(1.2,1.2);*/
+	-webkit-transition: font-size 0.5s ease-in;
+	-moz-transition: font-size 0.5s ease-in;
+	transition: font-size 0.5s ease-in;
+
+}
+/******************   TAG LINE ANIMATION  ****************************************/
+
+
+/******************   FOOTER SECTION  *****************************************/
+.footer {
+    height: 250px; /* .push must be the same height as .footer */
+    background-color: rgb(44,44,44);
+    color:	white;
+    font-size: 1em;
+    margin-top: 15px;
+    padding: 30px;
+}
+.social-icons {
+	margin: 20px 3px;
+}
+/******************  PRODUCT GALLERY FEATHERLIGHT STYLING *********************/
+
+.custom-gallery {
+	margin-top: 70px;
+}
+.thumbnail h3 {
+	color: black;
+	font-size: 1.5em;
+	z-index: 2000;
+}
+.thumbnail {
+	border: none;
+}
+.featherlight-next:hover, .featherlight-previous:hover {
+    background: none;
+}
+.featherlight .featherlight-content {
+	background: none;
+}
+.gallery img {
+	border-radius: 2%;
+	width: 400px;
+	height: 267px;
+}
+.featherlight-next span, .featherlight-previous span {
+	font-size: 2em;
+	font-weight: normal;
+	color: rgba(24,24,24,1);
+	text-shadow: 0 0 5px white;
+	position: absolute;
+	top:	45%;
+	cursor: pointer;
+}
+.featherlight-previous span {
+	left: 7%;
+}
+.featherlight-next span {
+	right: 7%;
+}
+.custom-gallery a, .custom-gallery a:hover {
+	text-decoration: none;
+	text-align: center;
+	color: white;
+}
+.featherlight .featherlight-close-icon {
+	color: white;
+	font-size: 2em;
+	background: rgba(242,45,25,.5);
+	font-weight: 800;
+	line-height:60px;
+	width:	60px;
+	border-radius: 50%;
+}
+.gallery-view-button,.gallery-buy-button {
+	margin: 5px;
+	position:	absolute;
+	font-size: 1.2em;
+	bottom: 30%;
+	color: white;
+	border-width: 1px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+	padding: 3px;
+	background: rgba(242,45,25,.9);
+}
+.gallery-view-button{
+	right: 50%;
+}
+.gallery-buy-button {
+	right: 30%;
+}
+
+/******************  CAROUSEL *************************************************/
+#fade-quote-carousel.carousel {
+  	padding-bottom: 60px;
+}
+#fade-quote-carousel.carousel .carousel-inner .item {
+  	opacity: 0;
+  	-webkit-transition-property: opacity;
+    -moz-transition-property: opacity;
+    transition-property: opacity;
+}
+#fade-quote-carousel.carousel .carousel-inner .active {
+  	opacity: 1;
+  	-webkit-transition-property: opacity;
+    -moz-transition-property: opacity;
+    transition-property: opacity;
+}
+#fade-quote-carousel.carousel .carousel-indicators {
+  	bottom: 10px;
+}
+#fade-quote-carousel.carousel .carousel-indicators > li {
+  	background-color: #e84a64;
+  	border: none;
+}
+#fade-quote-carousel blockquote {
+    text-align: center;
+    border: none;
+}
+#fade-quote-carousel .profile-circle {
+    width: 350px;
+    height: 100px;
+    margin: 0 auto;
+}
+.profile-circle-1 {
+	background: url("../images/press-logos/press-1.png");
+	background-size: cover;
+	background-position: center center;
+}
+.profile-circle-2 {
+	background: url("../images/press-logos/press-2.png");
+	background-size: cover;
+	background-position: center center;
+}
+.profile-circle-3 {
+	background: url("../images/press-logos/press-3.jpg");
+	background-size: cover;
+	background-position: center center;
+}
+blockquote {
+	border:	none;
+	font-family:	Georgia, "Times New Roman", Times, serif;
+	margin-bottom:	30px;
+}
+blockquote p {
+    font-size:	31px;
+    line-height: 1em;
+}
+blockquote p:before { 
+    /*position: absolute; */
+    /*top: 10;*/
+    /*left: -50;*/
+    content: open-quote;
+    font-weight: bold;
+    font-size:100px;
+    color:rgba(242,45,25,1);
+} 
