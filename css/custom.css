@@ -416,7 +416,7 @@ a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
 	margin: 0 auto;
 	position: absolute;
 	font-size: 1.2em;
-	bottom: 28px;
+	bottom: 32px;
 }
 .counter-button {
 	/*border: 1px solid rgb(81, 201, 109);*/
