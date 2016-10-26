@@ -419,8 +419,10 @@ a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
 	bottom: 32px;
 }
 .counter-button {
-	/*border: 1px solid rgb(81, 201, 109);*/
-	background: rgb(81, 201, 109);
+	background: rgba(44,44,44,.8);
+	-webkit-box-shadow: 10px 13px 12px -4px rgba(0,0,0,0.2);
+	-moz-box-shadow: 10px 13px 12px -4px rgba(0,0,0,0.2);
+	box-shadow: 10px 13px 12px -4px rgba(0,0,0,0.2);
 	border: none;
 	border-radius: 50%;
 }
