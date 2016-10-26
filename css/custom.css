@@ -319,10 +319,20 @@ table {
 .thumbnail h3 {
 	color: black;
 	font-size: 1.5em;
-	z-index: 2000;
+}
+.thumbnail:hover {
+	/*background: rgba(242,45,25,.7);*/
+	/*border: none;*/
+}
+a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
+    /*border:none;*/
 }
 .thumbnail {
 	border: none;
+	-webkit-box-shadow: -1px 3px 31px -6px rgba(133,129,133,1);
+	-moz-box-shadow: -1px 3px 31px -6px rgba(133,129,133,1);
+	box-shadow: -1px 3px 31px -6px rgba(133,129,133,1);
+	padding: 0;
 }
 .featherlight-next:hover, .featherlight-previous:hover {
     background: none;
@@ -332,8 +342,9 @@ table {
 }
 .gallery img {
 	border-radius: 2%;
-	width: 400px;
-	height: 267px;
+	width: 100%;
+	/*height: 267px;*/
+	padding: 0;
 }
 .featherlight-next span, .featherlight-previous span {
 	font-size: 2em;
@@ -368,7 +379,7 @@ table {
 	margin: 5px;
 	position:	absolute;
 	font-size: 1.2em;
-	bottom: 30%;
+	bottom: 47%;
 	color: white;
 	border-width: 1px;
     border-style: outset;
@@ -383,7 +394,51 @@ table {
 .gallery-buy-button {
 	right: 30%;
 }
+.buy-counter-variable {
+	width: 35px; 
+	height: 25px;
+	margin: 15px;
+	background: none;
+	border: none;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  text-align: center;
+  font-size: 1.1em;
+  color: black;
+}
+.glyphicon-minus, .glyphicon-plus {
+	color:rgb(81, 201, 109);
+	border: none; 
+	font-size: 1.5em;
+}
+.buy-counter {
+	width: 90%;
+	margin: 0 auto;
+	position: absolute;
+	font-size: 1.2em;
+	bottom: 28px;
+}
+.counter-button {
+	border: 1px solid rgb(81, 201, 109);
+	background: none;
+	border-radius: 50%;
+}
+@media(max-width: 760px) {
+	.buy-counter {
+		bottom: 8px;
+		width: 95%;
+	}
+	.gallery-view-button,.gallery-buy-button {
+		bottom: 48%;
+	}
+}
 
+.custom-gallery h5 {
+	width: 90%;
+	position:absolute;
+	bottom: 75px;
+	margin: 0 auto;
+}
 /******************  CAROUSEL *************************************************/
 #fade-quote-carousel.carousel {
   	padding-bottom: 60px;
