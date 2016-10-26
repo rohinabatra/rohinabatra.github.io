@@ -345,7 +345,7 @@ a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
 	padding: 0;
 }
 .featherlight-next span, .featherlight-previous span {
-	font-size: 2em;
+	font-size: 4em;
 	font-weight: normal;
 	color: rgba(24,24,24,1);
 	text-shadow: 0 0 5px white;
